@@ -301,7 +301,7 @@
 /datum/supply_pack/misc/religious_supplies
 	name = "Religious Supplies Crate"
 	desc = "Keep your local chaplain happy and well-supplied, lest they call down judgement upon your cargo bay. Contains two bottles of holywater, bibles, chaplain robes, and burial garmets."
-	cost = 4000	
+	cost = 4000
 	contains = list(/obj/item/reagent_containers/food/drinks/bottle/holywater,
 					/obj/item/reagent_containers/food/drinks/bottle/holywater,
 					/obj/item/storage/book/bible/booze,
@@ -310,19 +310,6 @@
 					/obj/item/clothing/suit/hooded/chaplain_hoodie
 					)
 	crate_name = "religious supplies crate"
-
-/datum/supply_pack/misc/randomised/promiscuous
-	name = "Promiscuous Organs"
-	desc = "Do YOU want to have more genital? Well we have just the thing for you~. This crate has two autosurgeon, that will let you have a new sex, organ to impress that hot stud and or chick."
-	cost = 4000 //Only get 2!
-	contraband = TRUE
-	var/num_contained = 2
-	contains = list(/obj/item/autosurgeon/penis,
-					/obj/item/autosurgeon/testicles,
-					/obj/item/autosurgeon/vagina,
-					/obj/item/autosurgeon/breasts,
-					/obj/item/autosurgeon/womb)
-	crate_name = "promiscuous organs"
 
 /datum/supply_pack/misc/shower
 	name = "Shower Supplies"
@@ -405,6 +392,18 @@
 					/obj/item/stack/tile/carpet/monochrome/fifty,
 					/obj/item/stack/tile/carpet/monochrome/fifty)
 	crate_name = "exotic carpet crate"
+
+/datum/supply_pack/misc/carpentry
+	name = "Carpentry Crate"
+	desc = "Make money at cargo by learning some carpentry and making custom furniture."
+	cost = 1000
+	contains = list(/obj/item/carpentry/handsaw,
+					/obj/item/carpentry/hammer,
+					/obj/item/carpentry/glue,
+					/obj/item/carpentry/borer,
+					/obj/item/carpentry/sandpaper)
+	crate_name = "carpentry crate"
+
 
 /datum/supply_pack/misc/prospacillin //size changing should be hard to achieve; so enjoy the price tag.
 	name = "Prospacillin Bottle"
