@@ -23,6 +23,8 @@
 	var/hidden					= FALSE
 	var/colourtint				= ""
 	var/mode					= "clothes"
+	var/obj/item/equipment 		//for fun stuff that goes on the gentials/maybe rings down the line
+	var/dontlist				= FALSE
 
 /obj/item/organ/genital/Initialize()
 	. = ..()
@@ -228,6 +230,11 @@
 			else
 				B.color = "#[dna.features["belly_color"]]"
 			B.update()
+
+		if(dna.features["hide_belly"]) //autohide bellies if they have the option ticked.
+			B.toggle_visibility("Always hidden")
+
+
 
 /mob/living/carbon/human/proc/give_breasts()
 	if(!dna)
