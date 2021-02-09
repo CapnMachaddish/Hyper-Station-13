@@ -876,6 +876,10 @@ datum/sprite_accessory/ears/human/gret
 	name = "Otie"
 	icon_state = "otie"
 
+/datum/sprite_accessory/mam_snouts/orca
+	name = "Orca"
+	icon_state = "orca"
+
 /datum/sprite_accessory/mam_snouts/pede
 	name = "Scolipede"
 	icon_state = "pede"
@@ -1166,7 +1170,6 @@ datum/sprite_accessory/ears/human/gret
 	icon_state = "gret"
 	color_src = MUTCOLORS3
 
-
 /datum/sprite_accessory/mam_ears/elephant
 	name = "Elephant"
 	icon_state = "elephant"
@@ -1182,6 +1185,10 @@ datum/sprite_accessory/ears/human/gret
 /datum/sprite_accessory/mam_ears/fox
 	name = "Fox"
 	icon_state = "fox"
+
+/datum/sprite_accessory/mam_ears/goathorns
+	name = "Goat Horns"
+	icon_state = "goathorns"
 
 /datum/sprite_accessory/mam_ears/husky
 	name = "Husky"
@@ -1536,6 +1543,18 @@ datum/sprite_accessory/mam_tails/insect
 /datum/sprite_accessory/mam_body_markings/redpanda
 	name = "Redpanda"
 	icon_state = "redpanda"
+
+/datum/sprite_accessory/mam_body_markings/abs
+	name = "Abdominals"
+	icon_state = "abs"
+
+/datum/sprite_accessory/mam_body_markings/abstwo
+	name = "Abdominals Two-Tones"
+	icon_state = "absbelly"
+
+/datum/sprite_accessory/mam_body_markings/absthree
+	name = "Abdominals Three-Tones"
+	icon_state = "absarms"
 
 /datum/sprite_accessory/mam_body_markings/bee
 	name = "Bee"

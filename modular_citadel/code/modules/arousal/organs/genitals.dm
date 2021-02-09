@@ -429,9 +429,9 @@
 			genital_overlay.icon_state = "[G.slot]_[S.icon_state]_[size]_[aroused_state]_[layertext]"
 			colourcode = S.color_src
 
-			if(G.slot == "belly")
+			if(G.slot == "belly") //we have a different size system to the rest of the genitals
 				genital_overlay.icon = 'hyperstation/icons/obj/genitals/belly.dmi'
-				genital_overlay.icon_state = "belly"
+				genital_overlay.icon_state = "belly_[size]"
 				colourcode = "belly_color"
 
 
@@ -440,7 +440,6 @@
 
 			if(use_skintones && H.dna.features["genitals_use_skintone"])
 				genital_overlay.color = "#[skintone2hex(H.skin_tone)]"
-//				genital_overlay.icon_state = "[G.slot]_[S.icon_state]_[size]-s_[aroused_state]_[layertext]"
 				if (colourtint)
 					genital_overlay.color = "#[colourtint]"
 			else
