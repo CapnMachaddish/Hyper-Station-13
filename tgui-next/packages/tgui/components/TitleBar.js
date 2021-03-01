@@ -33,7 +33,7 @@ export const TitleBar = props => {
       </div>
       <div
         className="TitleBar__dragZone"
-        onMousedown={e => fancy && onDragStart(e)} />
+        onMouseDown={e => fancy && onDragStart(e)} />
       {!!fancy && (
         <div
           className="TitleBar__close TitleBar__clickable"

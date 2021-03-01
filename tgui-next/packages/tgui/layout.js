@@ -81,11 +81,11 @@ export class Layout extends Component {
           {config.fancy && scrollable && (
             <Fragment>
               <div className="Layout__resizeHandle__e"
-                onMousedown={resizeStartHandler(1, 0)} />
+                onMouseDown={resizeStartHandler(1, 0)} />
               <div className="Layout__resizeHandle__s"
-                onMousedown={resizeStartHandler(0, 1)} />
+                onMouseDown={resizeStartHandler(0, 1)} />
               <div className="Layout__resizeHandle__se"
-                onMousedown={resizeStartHandler(1, 1)} />
+                onMouseDown={resizeStartHandler(1, 1)} />
             </Fragment>
           )}
         </div>
