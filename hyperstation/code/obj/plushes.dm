@@ -54,11 +54,21 @@
 	squeak_override = list('sound/voice/gorillaplush.ogg' = 1)
 
 /obj/item/toy/plush/mammal/lyricalpaws
-	name = "Winter Dawn Plushie"
-	desc = "Winter Dawn in plushie form! Very cuddly."
+	name = "hyena plushie"
+	desc = "An adorable stuffed toy of a mammal that seems to resemble a crew member! She's a little yeen in a big labcoat."
+	gender = FEMALE //probably a girl
 	icon = 'hyperstation/icons/obj/plushes.dmi'
 	icon_state = "lyricalpaws"
 	item_state = "lyricalpaws"
+	attack_verb = list("hugged", "cuddled", "embraced")
+	squeak_override = list(
+	'modular_citadel/sound/voice/bark1.ogg' = 1,
+	'modular_citadel/sound/voice/bark2.ogg' = 1
+	)
+
+/obj/item/toy/plush/mammal/lyricalpaws/attack_self(mob/user)
+	to_chat(user, "<span class='notice'>You pet [src]. You swear she looks up at you.</span>")
+
 
 /obj/item/toy/plush/mammal/chemlight
 	desc = "An adorable stuffed toy of a mammal that seems to resemble a crew member! It looks to glow and sport four arms."
@@ -83,3 +93,15 @@
 	attack_verb = list("nuked", "detonated", "CQC'd", "robusted")
 	squeak_override = list('sound/effects/hit_punch.ogg' = 1, 'sound/effects/hit_kick.ogg' = 1, 'sound/weapons/cqchit1.ogg' = 1, 'sound/weapons/cqchit2.ogg' = 1)
 //I can't figure out how to make him loyal to a specific type of plush. If anyone figures that out, there will be more. Until then, this is the end of the vladplush.
+
+//Enzo_Leon patron stuff
+/obj/item/toy/plush/mammal/enzo_leon
+	name = "rat plushie"
+	desc = "An stuffed toy of a mammal that seems to resemble a crew member! Iconically it has a squeaker as you'd expect."
+	gender = MALE	//It's a boy!
+	icon = 'hyperstation/icons/obj/plushes.dmi'
+	icon_state = "enzor"
+	item_state = "enzor"
+	attack_verb = list("tail bapped", "whomped", "squeaked")
+	squeak_override = list('sound/effects/mousesqueek.ogg'= 1)
+//End
