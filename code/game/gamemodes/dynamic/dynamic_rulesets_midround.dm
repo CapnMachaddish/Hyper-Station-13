@@ -247,7 +247,13 @@
 /datum/dynamic_ruleset/midround/autotraitor/trim_candidates()
 	..()
 	for(var/mob/living/player in living_players)
+		if(player.client == null) //Make sure the player has an attached client, otherwise, trim.
+			living_players -= player
+			continue
 		if(issilicon(player)) // Your assigned role doesn't change when you are turned into a silicon.
+			living_players -= player
+			continue
+		if(player.client.prefs.allow_midround_antag == 0) //Do they have midround traitor prefs enabled? If not, trim.
 			living_players -= player
 			continue
 		if(is_centcom_level(player.z))
@@ -255,6 +261,11 @@
 			continue
 		if(player.mind && (player.mind.special_role || player.mind.antag_datums?.len > 0))
 			living_players -= player // We don't autotator people with roles already
+			continue
+		if(ishuman(player))
+			var/mob/living/carbon/human/H = player
+			if(HAS_TRAIT(H,TRAIT_EXEMPT_HEALTH_EVENTS))
+				living_players -= player //We also don't fucking give ghost roles traitor. Yes I'm using the exempt health events trait given to ghost roles to do this, because piggyback ftw.
 
 /datum/dynamic_ruleset/midround/autotraitor/ready(forced = FALSE)
 	if (required_candidates > living_players.len)
