@@ -149,6 +149,25 @@
 
 //////////////////////////////////////////////
 //                                          //
+//                MIMICS                    //
+//                                          //
+//////////////////////////////////////////////
+
+/datum/dynamic_ruleset/event/mimics
+	name = "Mimic Infestation"
+	typepath = /datum/round_event/mimic_infestation
+	enemy_roles = list("AI","Security Officer","Head of Security","Captain")
+	required_enemies = list(3,2,2,2,2,1,1,1,0,0)
+	weight = 2
+	cost = 5
+	requirements = list(101,20,15,10,10,10,10,10,10,10)
+	high_population_requirement = 15
+	earliest_start = 30 MINUTES
+	occurances_max = 2
+	chaos_min = 2
+
+//////////////////////////////////////////////
+//                                          //
 //              CLOGGED VENTS               //
 //                                          //
 //////////////////////////////////////////////
@@ -459,6 +478,7 @@
 	//property_weights = list("extended" = 1)
 	//always_max_weight = TRUE
 	occurances_max = 0
+	map_blacklist = list("LayeniaStation.dmm")
 
 /datum/dynamic_ruleset/event/major_dust
 	name = "Major Space Dust"
@@ -474,6 +494,7 @@
 	repeatable = TRUE
 	//property_weights = list("extended" = 1)
 	occurances_max = 3
+	map_blacklist = list("LayeniaStation.dmm")
 	
 
 /datum/dynamic_ruleset/event/electrical_storm
